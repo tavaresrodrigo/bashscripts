@@ -13,12 +13,12 @@
         else
              echo "Porta configurada = $PORTPROXY"
         fi
- echo "Transparent Proxy [Yes]?"
+ echo "Proxy transparente ? (Sem usuario e senha) [Sim]?"
  read TRANSPARENT
-        if [[ "$TRANSPARENT" = "N" ]] || [[ "$TRANSPARENT" = "No" ]];then
-            echo  "Informe sua Chave"
+        if [[ "$TRANSPARENT" = "N" ]] || [[ "$TRANSPARENT" = "No" ]] || [[ "$TRANSPARENT" = "Não" ]] || [[ "$TRANSPARENT" = "Nao" ]];then
+            echo  "Informe sua Chave ou usuario:"
             read  CHAVE
-            echo  "Informe sua Senha"
+            echo  "Informe sua Senha:"
             read -s SENHA
             export http_proxy="http://$CHAVE:$SENHA@$HTTPPROXY:$PORTPROXY"
             export https_proxy="https://$CHAVE:$SENHA@$HTTPPROXY:$PORTPROXY"
@@ -28,4 +28,5 @@
             export https_proxy="https://$HTTPPROXY:$PORTPROXY"
        fi
 echo -e "---------PROXY CONFIGURADO COM SUCESSO---------\n"
-echo -e "Para reconfigurar execute o comando source configuraproxy no terminal.\n"
+echo -e "A configuracao vale apenas para sessao atual, caso usuario inicie uma nova sessao, sera necessario configurar o proxy novamente.\n"
+echo -e "Para reconfigurar execute o comando source configuraproxy em seu terminal.\n"
