@@ -15,7 +15,7 @@
         fi
  echo "Proxy transparente ? (Sem usuario e senha) [Sim]?"
  read TRANSPARENT
-        if [[ "$TRANSPARENT" = "N" ]] || [[ "$TRANSPARENT" = "No" ]] || [[ "$TRANSPARENT" = "Não" ]] || [[ "$TRANSPARENT" = "Nao" ]];then
+        if [[ "$TRANSPARENT" = "N" ]] || [[ "$TRANSPARENT" = "No" ]] || [[ "$TRANSPARENT" = "n" ]] || [[ "$TRANSPARENT" = "Nao" ]];then
             echo  "Informe sua Chave ou usuario:"
             read  CHAVE
             echo  "Informe sua Senha:"
