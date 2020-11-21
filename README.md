@@ -1,4 +1,4 @@
-Configuraproxy
+## Configuraproxy
 
 Script Bash para configurar o proxy na linha de comando Linux de uma forma segura. Esse script não deixa as informaçes de usuário e senha no histórico do bash. 
 
