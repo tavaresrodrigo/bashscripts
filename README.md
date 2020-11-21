@@ -22,3 +22,7 @@ Bash script that sums the absolute values of all integerers from the stdin and p
 ## Rotate Logs
 
 Bash script that rotates logs in the current directory. 
+
+## Scraper
+
+Bash scraper that retrieves all images from a web page given its URL and downloads them.
